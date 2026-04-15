@@ -24,12 +24,14 @@
     <nav class="doc-toc" id="toc" aria-label="目次">
       <h2 class="toc-title">目次</h2>
       <ol class="toc-list">
+      <li><a href="#at-a-glance">今日ひと目で</a></li>
       <li><a href="#intro">はじめに</a></li>
       <li><a href="#cursor">Cursor を知る</a></li>
       <li><a href="#skill">remo-library-skill と今日のゴール</a></li>
       <li><a href="#prep">事前準備</a></li>
       <li><a href="#schedule">当日の流れ</a></li>
       <li><a href="#howto">記事を作る手順</a></li>
+      <li><a href="#outlook">Cursorライティングのいまとこれから</a></li>
       <li><a href="#trouble">困ったときは</a></li>
       <li><a href="#after">ワークショップのあと</a></li>
       <li><a href="#ref">参考・フォルダ構成</a></li>
@@ -38,6 +40,28 @@
     </nav>
 
     <article class="doc-article" id="top">
+  <section class="workshop-at-a-glance" id="at-a-glance" aria-labelledby="aag-title">
+    <h2 id="aag-title" class="workshop-at-a-glance-title">今日ひと目で</h2>
+    <div class="workshop-at-a-glance-grid">
+      <div class="workshop-aag-card workshop-aag-card--goal">
+        <h3 class="workshop-aag-label">ゴール</h3>
+        <p class="workshop-aag-value">Cursor で「リモラボの裏側」の記事を 1 本完成させる</p>
+      </div>
+      <div class="workshop-aag-card workshop-aag-card--time">
+        <h3 class="workshop-aag-label">所要時間（目安）</h3>
+        <p class="workshop-aag-value">本イベントは <strong>約 60 分</strong>（タイムテーブルは「当日の流れ」参照）</p>
+      </div>
+      <div class="workshop-aag-card workshop-aag-card--bring">
+        <h3 class="workshop-aag-label">持ち物・事前の準備</h3>
+        <ul class="workshop-aag-list">
+          <li>PC（<strong>Cursor インストール済み</strong>）</li>
+          <li><code>remo-library-skill</code>（ZIP を解凍し、フォルダを Cursor で開ける状態）</li>
+          <li>配布の<strong>インタビューデータ</strong></li>
+          <li>安定したネット接続（あると安心）</li>
+        </ul>
+      </div>
+    </div>
+  </section>
   <section class="chapter chapter-intro" id="intro" aria-label="はじめに">
     <div class="doc-hero-inner">
       <p class="badge">コンテンツ管理ユニット AIワークショップ</p>
@@ -425,8 +449,86 @@ X（Twitter）: https://x.com/hanako_writer
     </div>
   </section>
 
-  <section class="chapter" id="trouble" data-chapter="trouble" aria-labelledby="trouble-heading">
-    <h2 id="trouble-heading">困ったときは</h2>
+  <section class="chapter chapter-outlook" id="outlook" data-chapter="outlook" aria-labelledby="outlook-heading">
+    <h2 id="outlook-heading">Cursorライティングのいまとこれから</h2>
+
+    <div class="chapter-viz chapter-viz-outlook">
+      <p class="viz-caption">ざっくりイメージ</p>
+      <div class="viz-outlook-flow" role="img" aria-label="素材とルールを足すと精度が上がるイメージ">
+        <span class="viz-outlook-step">素材を渡す</span>
+        <span class="viz-outlook-arr" aria-hidden="true">＋</span>
+        <span class="viz-outlook-step">ルールを足す</span>
+        <span class="viz-outlook-arr" aria-hidden="true">→</span>
+        <span class="viz-outlook-step">精度アップ</span>
+      </div>
+    </div>
+    <div class="chapter-inner">
+
+      <p class="outlook-lead">ここでは、リモラボ／リモライブラリー側で試している <strong>Cursor とスキル</strong>の運用を、当日のハンズオンとは別に<strong>ざっくり</strong>整理します。数字や体制は変わり得るので、「全体の空気感」の把握にお使いください。</p>
+
+      <h3 class="chunk-title">いまの状態（うまくいっていること）</h3>
+      <div class="chunk-body">
+        <ul class="outlook-list">
+          <li>1記事あたり、従来に比べて<strong>2〜3時間分くらいの作業を短く</strong>できることがある</li>
+          <li>ライター向けの<strong>フィードバック動画を毎回作らなくて済む</strong>場面が増えた</li>
+          <li>過去記事・画像・Canva・スライドなどを読ませると、<strong>一気にそろった案</strong>が出ることがある</li>
+          <li><strong>段階を重ねて読み手を意識するチェック</strong>（いわゆるペルソナチェックなど）をスキルに載せられる</li>
+          <li>スキルを <strong>Claude／Cursor で管理</strong>し、スマホからも同じ流れを使いやすい体制が整いつつある</li>
+        </ul>
+      </div>
+
+      <h3 class="chunk-title">いまの課題・ばらつき</h3>
+      <div class="chunk-body">
+        <ul class="outlook-list">
+          <li><strong>一発でそのまま公開</strong>はまだ期待しすぎない方がよい（当たり外れがある）</li>
+          <li>渡す情報が薄いと、<strong>内容が薄く省略</strong>されやすい</li>
+          <li>過去記事の情報だけでは<strong>深掘りしきれない</strong>こともある</li>
+          <li><strong>AIらしい言い回し</strong>は混じるので、人の手で整える前提が必要</li>
+          <li><strong>新企画</strong>の記事は、情報収集そのものに時間がかかりやすい</li>
+          <li>環境によっては<strong>文字化け</strong>などもゼロではない</li>
+        </ul>
+      </div>
+
+      <h3 class="chunk-title">これから足していきたいこと（方向性）</h3>
+      <div class="chunk-body">
+        <p class="prose outlook-subhead"><strong>スキル・プロンプト</strong></p>
+        <ul class="outlook-list">
+          <li>クラスごとの<strong>読者像・悩み</strong>をスキルに反映する</li>
+          <li><strong>アンケートの生の声</strong>を組み込み、冒頭の興味づけを改善する</li>
+          <li><strong>使わない言い回し／使う言い回し</strong>を一覧化してスキルに載せる</li>
+          <li>Cursor が増やしたスキル内容の<strong>棚卸し・整理</strong></li>
+        </ul>
+        <p class="prose outlook-subhead"><strong>ライティングの型</strong></p>
+        <ul class="outlook-list">
+          <li>書く前に <strong>目的・伝えたいこと・読者の Before/After</strong> をそろえる運用</li>
+          <li><strong>最低限の情報がないと書けない</strong>と、AI から聞き返す流れ</li>
+          <li>修正内容を<strong>ルールとして蓄積</strong>するサイクルの定着</li>
+        </ul>
+        <p class="prose outlook-subhead"><strong>情報の置き場</strong></p>
+        <ul class="outlook-list">
+          <li>リモライブラリー関連の素材を<strong>探しやすい一箇所</strong>に寄せる</li>
+          <li>情報の集め方そのものの見直し</li>
+        </ul>
+      </div>
+
+      <h3 class="chunk-title">目安のマイルストーン（例）</h3>
+      <div class="chunk-body">
+        <ul class="outlook-list">
+          <li><strong>4〜5月</strong>：改善したスキルで記事の精度を試す</li>
+          <li><strong>5月末まで</strong>：運営として「<strong>ほぼ手直しなしで使える</strong>」に近い状態を<strong>約8割</strong>目安で目指す、など</li>
+        </ul>
+        <p class="outlook-note">※ 日程・数値はチームで合意のうえ調整してください。</p>
+      </div>
+
+      <aside class="callout callout-info">
+        <p><strong>ゴールのイメージ：</strong>「分身として完璧に仕事してもらう」に近づけること。いまは<strong>スキルを育て、入力とルールを積み上げるフェーズ</strong>だと捉えると、今日のハンズオンともつながります。</p>
+      </aside>
+    </div>
+  </section>
+
+  <details class="chapter-details chapter-appendix" id="trouble" open>
+    <summary class="chapter-details-summary"><span class="chapter-details-summary-title">困ったときは</span><span class="chapter-details-chevron" aria-hidden="true"></span></summary>
+    <div class="chapter-details-body">
 
     <div class="chapter-viz">
       <div class="viz-trouble-banner">
@@ -441,10 +543,12 @@ X（Twitter）: https://x.com/hanako_writer
 
     <h3 class="chunk-title">Q: 記事が期待と違う内容になった</h3><div class="chunk-body"><div class="qa-list"><div class="qa-item"><p class="q"><span class="label">Q</span>記事が期待と違う内容になった</p><p class="a"><span class="label">A</span>大丈夫です!これも学びです。追加で指示を出して修正してみまし<br>ょう。わからなければ声をかけてください。</p></div><div class="qa-item"><p class="q"><span class="label">Q</span>生成が遅い</p><p class="a"><span class="label">A</span>Cursor の無料プランは速度制限があります。少し待つか、他の人の<br>進捗を見ながら待ちましょう。</p></div></div></div>
     </div>
-  </section>
+    </div>
+  </details>
 
-  <section class="chapter" id="after" data-chapter="after" aria-labelledby="after-heading">
-    <h2 id="after-heading">ワークショップのあと</h2>
+  <details class="chapter-details chapter-appendix" id="after">
+    <summary class="chapter-details-summary"><span class="chapter-details-summary-title">ワークショップのあと</span><span class="chapter-details-chevron" aria-hidden="true"></span></summary>
+    <div class="chapter-details-body">
 
     <div class="chapter-viz">
       <p class="viz-caption">あとから広げやすい使い方</p>
@@ -467,10 +571,12 @@ X（Twitter）: https://x.com/hanako_writer
     <h3 class="chunk-title">3. 自分の業務に応用する</h3>
     <div class="chunk-body"><div class="prose">Cursor は記事作成以外にも使えます:<br> メールの下書き<br> データの分析<br> 議事録の整理<br> チェックリストの作成<br> 情報のリサーチ<br>困ったことがあれば、その場で遠慮なく声をかけてください!</div></div>
     </div>
-  </section>
+    </div>
+  </details>
 
-  <section class="chapter" id="ref" data-chapter="ref" aria-labelledby="ref-heading">
-    <h2 id="ref-heading">参考・フォルダ構成</h2>
+  <details class="chapter-details chapter-appendix" id="ref">
+    <summary class="chapter-details-summary"><span class="chapter-details-summary-title">参考・フォルダ構成</span><span class="chapter-details-chevron" aria-hidden="true"></span></summary>
+    <div class="chapter-details-body">
 
     <div class="chapter-viz">
       <div class="viz-ref-note">
@@ -492,7 +598,8 @@ remo-library-skill/
     <h3 class="chunk-title">もっと詳しく知りたい方は</h3>
     <div class="chunk-body"><div class="prose">README.md - remo-library-skill の詳しい使い方<br>SKILL.md - AI への指示内容(上級者向け)<br>それでは、楽しく記事を作りましょう!</div></div>
     </div>
-  </section>
+    </div>
+  </details>
     </article>
   </div>
 
