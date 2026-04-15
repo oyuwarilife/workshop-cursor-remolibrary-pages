@@ -543,6 +543,10 @@ html {
 .chapter-details-body .chapter-inner {
   border-left-color: #fbcfe8;
 }
+/* outlook を details にしたとき：ビジュアル帯の余白 */
+.chapter-details.chapter-outlook .chapter-viz-outlook {
+  margin-top: 0;
+}
 
 /* 目次 */
 .doc-toc {
