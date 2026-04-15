@@ -126,63 +126,351 @@ html {
   margin: 0.25rem 0;
 }
 
-/* Cursorライティングのいまとこれから（章） */
-.chapter-outlook .outlook-lead {
-  margin: 0 0 1.25rem;
-  font-size: 0.98rem;
-  line-height: 1.8;
-  color: var(--text);
+/* Cursorライティングのいまとこれから（章・視覚強化） */
+.chapter-viz-outlook {
+  background: linear-gradient(160deg, #fdf4ff 0%, #fff7fb 40%, #fce7f3 100%);
+  border: 1px solid #f9a8d4;
+  border-radius: 18px;
+  padding: 1.1rem 1rem 1.25rem;
+  margin-bottom: 0.25rem;
+  box-shadow: 0 8px 28px rgba(190, 24, 93, 0.1);
 }
-.chapter-outlook .outlook-subhead {
-  margin: 1.1rem 0 0.35rem;
-  font-size: 0.95rem;
+.chapter-viz-outlook .viz-caption {
+  text-align: center;
+  margin-bottom: 0.85rem;
+  font-weight: 700;
   color: #9d174d;
+  letter-spacing: 0.06em;
 }
-.chapter-outlook .outlook-subhead:first-of-type {
-  margin-top: 0;
+.outlook-flow-diagram {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  gap: 0.5rem 0.65rem;
 }
-.chapter-outlook .outlook-list {
-  margin: 0.25rem 0 0.85rem;
-  padding-left: 1.2rem;
+.outlook-flow-card {
+  flex: 1 1 7.5rem;
+  max-width: 11rem;
+  min-height: 7.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0.75rem 0.65rem 0.85rem;
+  background: #fff;
+  border: 2px solid #fbcfe8;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(190, 24, 93, 0.08);
+}
+.outlook-flow-card--accent {
+  border-color: #f472b6;
+  background: linear-gradient(180deg, #fff 0%, #fff5f9 100%);
+}
+.outlook-flow-card--goal {
+  border-color: #db2777;
+  background: linear-gradient(180deg, #fffdfb 0%, #fce7f3 100%);
+}
+.outlook-flow-ico {
+  font-size: 1.35rem;
+  line-height: 1;
+  margin-bottom: 0.35rem;
+}
+.outlook-flow-kicker {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #db2777;
+  margin-bottom: 0.2rem;
+}
+.outlook-flow-main {
   font-size: 0.95rem;
-  line-height: 1.75;
+  font-weight: 700;
+  color: #831843;
+  line-height: 1.35;
+}
+.outlook-flow-sub {
+  margin-top: 0.35rem;
+  font-size: 0.72rem;
+  line-height: 1.45;
+  color: var(--muted);
+}
+.outlook-flow-op {
+  align-self: center;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #ec4899;
+  padding: 0 0.15rem;
+}
+.outlook-flow-op--arrow {
+  font-size: 1.6rem;
+  color: #be185d;
+}
+@media (max-width: 520px) {
+  .outlook-flow-diagram {
+    flex-direction: column;
+    align-items: center;
+  }
+  .outlook-flow-card {
+    max-width: 100%;
+    width: 100%;
+    min-height: 0;
+  }
+  .outlook-flow-op {
+    transform: rotate(90deg);
+    padding: 0.25rem 0;
+  }
+  .outlook-flow-op--arrow {
+    transform: none;
+  }
+}
+
+.chapter-outlook .outlook-lead-card {
+  margin: 0 0 1.35rem;
+  padding: 1rem 1.1rem 1.05rem;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  border-left: 4px solid #db2777;
+  box-shadow: 0 2px 12px var(--shadow);
+}
+.chapter-outlook .outlook-lead {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.85;
   color: var(--text);
 }
-.chapter-outlook .outlook-list:last-of-type {
+
+.outlook-compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 0 0 1.75rem;
+}
+@media (max-width: 720px) {
+  .outlook-compare {
+    grid-template-columns: 1fr;
+  }
+}
+.outlook-panel {
+  margin: 0;
+  padding: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--card);
+  box-shadow: 0 4px 16px var(--shadow);
+}
+.outlook-panel--good {
+  border-top: 4px solid #059669;
+}
+.outlook-panel--risk {
+  border-top: 4px solid #ea580c;
+}
+.outlook-panel-head {
+  margin: 0;
+  padding: 0.75rem 0.9rem 0.65rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #831843;
+  line-height: 1.4;
+  background: linear-gradient(180deg, #fafafa 0%, #fff 100%);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.5rem;
+}
+.outlook-panel-sub {
+  display: block;
+  width: 100%;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+}
+.outlook-panel-badge {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+}
+.outlook-panel-badge--good {
+  background: #d1fae5;
+  color: #065f46;
+}
+.outlook-panel-badge--risk {
+  background: #ffedd5;
+  color: #9a3412;
+}
+.outlook-item-list {
+  margin: 0;
+  padding: 0.75rem 0.85rem 0.95rem 2.05rem;
+  list-style: none;
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--text);
+}
+.outlook-item-list li {
+  position: relative;
+  margin: 0.45rem 0;
+  padding-left: 0.15rem;
+}
+.outlook-item-list--good li::before {
+  content: "";
+  position: absolute;
+  left: -1.15rem;
+  top: 0.5em;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 0 2px #d1fae5;
+}
+.outlook-item-list--risk li::before {
+  content: "";
+  position: absolute;
+  left: -1.15rem;
+  top: 0.5em;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 2px;
+  background: #fb923c;
+  transform: rotate(45deg);
+}
+.chapter-outlook .outlook-section-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 0.65rem;
+}
+.outlook-section-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #9d174d;
+  background: #fce7f3;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  vertical-align: middle;
+}
+.outlook-future-wrap {
   margin-bottom: 0.25rem;
 }
-.chapter-outlook .outlook-list li {
-  margin: 0.35rem 0;
+.outlook-future-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+  margin-top: 0.35rem;
+}
+@media (max-width: 820px) {
+  .outlook-future-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.outlook-mini-card {
+  background: linear-gradient(165deg, #fff 0%, #fffafc 100%);
+  border: 1px solid #f9a8d4;
+  border-radius: 12px;
+  padding: 0.75rem 0.85rem 0.9rem;
+  box-shadow: 0 2px 10px rgba(190, 24, 93, 0.06);
+}
+.outlook-mini-title {
+  margin: 0 0 0.55rem;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #9d174d;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 1px dashed #fbcfe8;
+}
+.outlook-mini-ico {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+.outlook-mini-list {
+  margin: 0;
+  padding-left: 1rem;
+  font-size: 0.86rem;
+  line-height: 1.62;
+  color: var(--text);
+}
+.outlook-mini-list li {
+  margin: 0.32rem 0;
+}
+
+.outlook-milestones {
+  list-style: none;
+  margin: 0.35rem 0 0;
+  padding: 0;
+  position: relative;
+}
+.outlook-ms-item {
+  position: relative;
+  padding: 0 0 1.15rem 1.85rem;
+  margin: 0;
+}
+.outlook-ms-item:last-child {
+  padding-bottom: 0;
+}
+.outlook-ms-item::before {
+  content: "";
+  position: absolute;
+  left: 0.55rem;
+  top: 1.5rem;
+  bottom: -0.25rem;
+  width: 3px;
+  background: linear-gradient(180deg, #f9a8d4 0%, #fce7f3 100%);
+  border-radius: 2px;
+}
+.outlook-ms-item:last-child::before {
+  display: none;
+}
+.outlook-ms-dot {
+  position: absolute;
+  left: 0.2rem;
+  top: 0.35rem;
+  width: 0.85rem;
+  height: 0.85rem;
+  border-radius: 50%;
+  background: #fff;
+  border: 3px solid #db2777;
+  box-shadow: 0 1px 4px rgba(190, 24, 93, 0.25);
+}
+.outlook-ms-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.outlook-ms-when {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: #fff;
+  background: linear-gradient(135deg, #be185d 0%, #db2777 100%);
+  padding: 0.2rem 0.55rem;
+  border-radius: 6px;
+  width: fit-content;
+}
+.outlook-ms-text {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: var(--text);
 }
 .chapter-outlook .outlook-note {
-  margin: 0.65rem 0 0;
+  margin: 0.85rem 0 0;
   font-size: 0.86rem;
   color: var(--muted);
   line-height: 1.6;
 }
-.chapter-viz-outlook .viz-outlook-flow {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 0.45rem 0.65rem;
-  padding: 0.35rem 0;
-}
-.chapter-viz-outlook .viz-outlook-step {
-  display: inline-block;
-  padding: 0.4rem 0.85rem;
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  font-size: 0.88rem;
-  font-weight: 600;
-  color: #831843;
-  box-shadow: 0 1px 6px var(--shadow);
-}
-.chapter-viz-outlook .viz-outlook-arr {
-  font-weight: 700;
-  color: #db2777;
-  font-size: 0.95rem;
+.chapter-outlook .outlook-goal-callout {
+  margin-top: 1.15rem;
 }
 
 /* 付録：details で畳む章 */
