@@ -125,6 +125,20 @@ html {
 .workshop-aag-list li {
   margin: 0.25rem 0;
 }
+.workshop-at-a-glance .workshop-preopen-check {
+  margin: 1rem 0 0;
+  padding: 0.65rem 0.9rem;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  background: linear-gradient(180deg, #fffbeb 0%, #fef3c7 100%);
+  border: 1px solid #fcd34d;
+  border-radius: 10px;
+  color: #78350f;
+  box-shadow: 0 1px 6px rgba(245, 158, 11, 0.12);
+}
+.workshop-at-a-glance .workshop-preopen-check strong {
+  color: #92400e;
+}
 
 /* Cursorライティングのいまとこれから（章・視覚強化） */
 .chapter-viz-outlook {
