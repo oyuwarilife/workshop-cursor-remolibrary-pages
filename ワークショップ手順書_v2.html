@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>コンテンツ管理ユニット AIワークショップ｜手順書（読みやすい版）</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="workshop-handbook.css" />
+  <link rel="stylesheet" href="workshop-document.css" />
+  <link rel="stylesheet" href="workshop-visual.css" />
+</head>
+<body>
+  <a class="skip-link" href="#toc">目次へスキップ</a>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <h1 class="site-title">コンテンツ管理ユニット<br />AIワークショップ</h1>
+    </div>
+  </header>
+
+  <div class="doc-shell">
+    <nav class="doc-toc" id="toc" aria-label="目次">
+      <h2 class="toc-title">目次</h2>
+      <ol class="toc-list">
+      <li><a href="#intro">はじめに</a></li>
+      <li><a href="#cursor">Cursor を知る</a></li>
+      <li><a href="#skill">remo-library-skill と今日のゴール</a></li>
+      <li><a href="#prep">事前準備</a></li>
+      <li><a href="#schedule">当日の流れ</a></li>
+      <li><a href="#howto">記事を作る手順</a></li>
+      <li><a href="#trouble">困ったときは</a></li>
+      <li><a href="#after">ワークショップのあと</a></li>
+      <li><a href="#ref">参考・フォルダ構成</a></li>
+      </ol>
+      <p class="toc-back"><a href="#top">↑ ページ先頭へ</a></p>
+    </nav>
+
+    <article class="doc-article" id="top">
+  <section class="chapter chapter-intro" id="intro" aria-label="はじめに">
+    <div class="doc-hero-inner">
+      <p class="badge">コンテンツ管理ユニット AIワークショップ</p>
+      <h1>リモライブラリー記事を Cursor で作る</h1>
+      <p class="hero-lead">リモラボ公式コンテンツ「リモライブラリー」の記事を、<br>Cursor を使って作成する体験をします。</p>
+      <div class="hero-goal" role="region" aria-labelledby="today-goal-label">
+        <p class="hero-goal-label" id="today-goal-label">今日のゴール</p>
+        <p class="hero-goal-text">Cursor で「リモラボの裏側」の記事を 1 本完成させる</p>
+      </div>
+
+      <div class="hero-materials" role="region" aria-labelledby="hero-materials-heading">
+        <p class="hero-materials-heading" id="hero-materials-heading">今日使うファイル・データ</p>
+        <dl class="hero-materials-dl">
+          <div class="hero-materials-item">
+            <dt>Skill ファイル</dt>
+            <dd><code>SKILL.md</code>（フォルダ <code>remo-library-skill</code> を Cursor で開いたうえで、チャットに <code>@SKILL.md</code> で指定）</dd>
+          </div>
+          <div class="hero-materials-item">
+            <dt>渡すデータ</dt>
+            <dd>配布の<strong>インタビューデータ</strong>（質問と回答のテキスト。チャットにそのまま貼り付け）</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+    <figure class="viz-intro-flow">
+      <figcaption>今日の流れ（イメージ）</figcaption>
+      <div class="viz-steps">
+        <div class="viz-step"><span class="viz-step-icon" aria-hidden="true">📋</span>インタビュー<br>データを用意</div>
+        <span class="viz-arrow" aria-hidden="true">→</span>
+        <div class="viz-step"><span class="viz-step-icon" aria-hidden="true">💻</span>Cursor で<br>@SKILL.md ＋指示</div>
+        <span class="viz-arrow" aria-hidden="true">→</span>
+        <div class="viz-step"><span class="viz-step-icon" aria-hidden="true">✨</span>記事が<br>完成</div>
+      </div>
+    </figure>
+    <div class="workshop-sample-pack">
+      <h2 class="workshop-sample-title">講習用サンプル</h2>
+
+      <section class="workshop-sample-section" aria-labelledby="ws-zip-h">
+        <h3 class="workshop-sample-h3" id="ws-zip-h">使用するファイル</h3>
+        <p class="workshop-sample-p"><a href="remo-library-skill.zip" download="remo-library-skill.zip" class="zip-download">remo-library-skill.zip をダウンロード</a>（このワークショップフォルダ直下に同梱。手順書 HTML と同じフォルダからの相対リンクです）</p>
+        <p class="workshop-sample-p">ZIP を解凍し、<code>remo-library-skill</code> フォルダを Cursor で開きます。</p>
+        <p class="workshop-sample-note">新しい配布 ZIP を受け取ったら、<strong>同じファイル名</strong>で上書きしてください（いまはルート直下を優先してリンクします。<code>samples/</code> だけに置く場合も対応しています）。</p>
+      </section>
+
+      <section class="workshop-sample-section" aria-labelledby="ws-dummy-h">
+        <h3 class="workshop-sample-h3" id="ws-dummy-h">Cursor に渡す記事用のデータ（ダミー）</h3>
+        <p class="workshop-sample-lead"><strong>リモラボ講師：はなこさん【ダミーデータ】</strong></p>
+        <p class="workshop-sample-hint">次のブロックを<strong>そのまま</strong>チャットに貼り付けて試せます（<code>@SKILL.md</code> 参照・指示・インタビュー本文をまとめた例です）。</p>
+        <div class="prompt-sample-toolbar">
+          <span class="prompt-sample-toolbar-hint">中身をまとめてコピー</span>
+          <button type="button" class="copy-prompt-btn" data-copy-target="dummy-prompt-pre" data-copy-label="コピーしました！" aria-describedby="ws-dummy-h">クリップボードにコピー</button>
+        </div>
+        <div class="prompt-sample-wrap">
+          <pre class="prompt-sample" id="dummy-prompt-pre" tabindex="0" title="クリックで全選択もできます"><code>@SKILL.md
+この内容に従って、リモラボの裏側の記事を書いてください
+
+【対象者】はなこ
+
+【1】今、リモラボでどんなお仕事をしていますか？
+
+リモラボでは、Webライティング講座の講師とコンテンツ制作を担当しています。
+初心者の方でも分かりやすく、すぐに実践できるライティングスキルを教えることを大切にしています。また、リモメン向けの記事テンプレートやチェックリストの作成も行っています。
+
+【2】そのお仕事で、大切にしている考え方や思いを教えてください
+
+「書くことは怖くない」と思ってもらうこと。ライティングって難しそうに見えるけど、型を覚えて練習すれば誰でもできるようになります。一人ひとりのペースを大切にしながら、小さな成功体験を積み重ねてもらいたいです。
+
+【3】1日の流れ（活動内容）
+
+  7:00　起床・朝食
+  8:00　子供を学校に送り出す
+  9:00　メールチェック・講座準備
+ 10:00　ライティング講座（週2回）
+ 12:00　お昼休憩
+ 13:00　コンテンツ制作・記事執筆
+ 15:00　リモメンの課題添削
+ 16:00　子供のお迎え・おやつタイム
+ 17:00　夕食準備
+ 18:30　家族との時間
+ 20:00　講座の振り返り・改善案作成
+ 21:30　自由時間（読書や映画）
+ 23:00　就寝
+
+【4】リモメンにおすすめしたいコンテンツ
+
+・Webライティング基礎講座
+・記事添削会
+・SEOライティング実践講座
+・ライティングチェックリスト
+・記事構成テンプレート集
+
+推しコンテンツは「記事添削会」です。
+実際に書いた記事を一緒に見直しながら、どこをどう改善すればもっと良くなるかを具体的にお伝えしています。添削を受けた後、ぐんと成長する姿を見るのが本当に嬉しいです！
+
+【5】推しコンテンツの推しポイントや作っていて大変なこと
+
+記事添削会では、一人ひとりの記事を丁寧に読んで、その人に合ったアドバイスを心がけています。「ここが良い！」というポジティブなフィードバックを必ず入れながら、改善点も具体的に伝えるようにしています。大変なのは、添削に時間がかかること（笑）。一つの記事に30分以上かけることもありますが、「わかりやすかったです！」「すぐに修正できました！」という声をいただくと、疲れも吹き飛びます。ライティングって、ちょっとしたコツで劇的に変わるんです。そのコツを伝えられる瞬間が、講師としての一番のやりがいです。
+
+【6】リモメンにメッセージをお願いします
+
+私も最初は「文章書くの苦手…」って思ってました。でも、型を覚えて、練習して、添削してもらって、を繰り返したら、今では記事を書くのが楽しくなりました。ライティングスキルは一生使えるスキルです。最初は完璧じゃなくていいので、まずは書いてみることから始めましょう！間違えても大丈夫。添削会でたくさん質問してください。一緒に成長していきましょう✨
+
+【7】公開していいアカウント（SNS等）
+
+Instagram: https://www.instagram.com/hanako_writing/
+X（Twitter）: https://x.com/hanako_writer
+</code></pre>
+        </div>
+        <p class="workshop-sample-source">コピー元テキスト：<code>samples/ダミー_はなこ_チャット貼り付け用.txt</code></p>
+      </section>
+    </div>
+  </section>
+
+  <section class="chapter" id="cursor" data-chapter="cursor" aria-labelledby="cursor-heading">
+    <h2 id="cursor-heading">Cursor を知る</h2>
+
+    <div class="chapter-viz" aria-hidden="true">
+      <p class="viz-caption">イメージ</p>
+      <div class="viz-lanes">
+        <div class="viz-lane viz-lane-chatgpt">
+          <span class="viz-lane-label">一般的な AI</span>
+          <span>ブラウザでチャット → 回答をコピーして使う</span>
+        </div>
+        <div class="viz-lane viz-lane-cursor">
+          <span class="viz-lane-label">Cursor</span>
+          <span>エディタでチャット → フォルダ内のファイルを直接編集</span>
+        </div>
+      </div>
+    </div>
+    <div class="chapter-inner">
+    <h3 class="chunk-title">Cursor って何?</h3>
+    <div class="chunk-body"><div class="prose">Cursorは、 AI と対話しながら作業ができるエディタです。</div></div>
+
+    <h3 class="chunk-title">普通の AI ツールとの違い</h3>
+    <div class="chunk-body">
+      <table class="compare">
+        <thead><tr><th></th><th>普通の AI（ChatGPT 等）</th><th>Cursor</th></tr></thead>
+        <tbody>
+          <tr><th>会話</th><td>チャットで会話する</td><td>チャットで会話する</td></tr>
+          <tr><th>結果の扱い</th><td>回答をコピペする</td><td>ファイルを直接作成・編集してくれる</td></tr>
+          <tr><th>進め方</th><td>1 つずつ質問する</td><td>複数ファイルを見ながら作業できる</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="chunk-title">Cursor でできることの例</h3>
+    <div class="chunk-body">
+      <ol class="cursor-example-list" aria-label="Cursor でできることの例（5つ）">
+      <li class="cursor-example-item">
+        <span class="cursor-example-num">1</span>
+        <div class="cursor-example-body">
+          <strong class="cursor-example-label">コード作成・編集</strong>
+          <p class="cursor-example-prompt">「このコードにエラーチェック機能を追加して」</p>
+          <p class="cursor-example-result"><span class="cursor-example-arrow" aria-hidden="true">→</span> AI がコードを書いてくれる</p>
+        </div>
+      </li>
+      <li class="cursor-example-item">
+        <span class="cursor-example-num">2</span>
+        <div class="cursor-example-body">
+          <strong class="cursor-example-label">文章作成</strong>
+          <p class="cursor-example-prompt">「ブログ記事を書いて」</p>
+          <p class="cursor-example-result"><span class="cursor-example-arrow" aria-hidden="true">→</span> AI が記事を作成してくれる</p>
+        </div>
+      </li>
+      <li class="cursor-example-item">
+        <span class="cursor-example-num">3</span>
+        <div class="cursor-example-body">
+          <strong class="cursor-example-label">データ分析</strong>
+          <p class="cursor-example-prompt">「この CSV データを分析して」</p>
+          <p class="cursor-example-result"><span class="cursor-example-arrow" aria-hidden="true">→</span> AI が分析結果をまとめてくれる</p>
+        </div>
+      </li>
+      <li class="cursor-example-item">
+        <span class="cursor-example-num">4</span>
+        <div class="cursor-example-body">
+          <strong class="cursor-example-label">ファイル整理</strong>
+          <p class="cursor-example-prompt">「このフォルダを整理して」</p>
+          <p class="cursor-example-result"><span class="cursor-example-arrow" aria-hidden="true">→</span> AI がファイルを整理してくれる</p>
+        </div>
+      </li>
+      <li class="cursor-example-item">
+        <span class="cursor-example-num">5</span>
+        <div class="cursor-example-body">
+          <strong class="cursor-example-label">翻訳・要約</strong>
+          <p class="cursor-example-prompt">「この英語の文章を日本語にして」</p>
+          <p class="cursor-example-result"><span class="cursor-example-arrow" aria-hidden="true">→</span> AI が翻訳してくれる</p>
+        </div>
+      </li>
+      </ol>
+    </div>
+
+    <h3 class="chunk-title">今日の使い方</h3>
+    <div class="chunk-body"><div class="prose">今日は「文章作成」の機能を使います。<br>AI に「リモラボの裏側の記事を書いて」と頼むと、<br>インタビューデータを読み込んで、<br>「公式さん」の口調で記事を自動生成してくれます。<br>プログラミングの知識は一切不要です!</div></div>
+    </div>
+  </section>
+
+  <section class="chapter" id="skill" data-chapter="skill" aria-labelledby="skill-heading">
+    <h2 id="skill-heading">remo-library-skill と今日のゴール</h2>
+
+    <div class="chapter-viz">
+      <p class="viz-caption">remo-library-skill の位置づけ</p>
+      <div class="viz-pipeline" role="img" aria-label="インタビューから記事までの流れ">
+        <span class="viz-pipe"><span class="viz-pipe-ico" aria-hidden="true">💬</span>インタビュー</span>
+        <span class="viz-pipe-arrow" aria-hidden="true">→</span>
+        <span class="viz-pipe"><span class="viz-pipe-ico" aria-hidden="true">🧩</span>SKILL</span>
+        <span class="viz-pipe-arrow" aria-hidden="true">→</span>
+        <span class="viz-pipe"><span class="viz-pipe-ico" aria-hidden="true">📄</span>記事（.md）</span>
+      </div>
+      <div class="viz-feature-chips" aria-label="主な機能（5つ）">
+        <span class="viz-chip"><span class="viz-chip-num">1</span>自動生成</span>
+        <span class="viz-chip"><span class="viz-chip-num">2</span>口調統一</span>
+        <span class="viz-chip"><span class="viz-chip-num">3</span>構成</span>
+        <span class="viz-chip"><span class="viz-chip-num">4</span>添削</span>
+        <span class="viz-chip"><span class="viz-chip-num">5</span>修正指示</span>
+      </div>
+    </div>
+    <div class="chapter-inner">
+    <h3 class="chunk-title">記事作成で何ができる?</h3>
+    <div class="chunk-body"><div class="prose">remo-library-skill の特徴<br>今日使うremo-library-skillは、リモラボ公式コンテンツの記事を作成<br>するための専用ツールです。</div></div>
+
+    <h3 class="chunk-title">できること1  自動生成</h3>
+    <div class="chunk-body"><div class="prose">インタビューデータから記事を自動作成<br>質問と回答を渡すだけで記事が完成<br>できること2  口調の統一<br>「公式さん」の口調で自動調整<br>「皆さま」 → 「みなさん」など自動修正</div></div>
+
+    <h3 class="chunk-title">できること3  構成の自動化</h3>
+    <div class="chunk-body"><div class="prose">カテゴリごとの決まった構成で生成<br>冒頭の固定文、見出しの順番など<br>できること4  自動添削<br>AI が自分で記事をチェック<br>90 点以上を目指して自己修正</div></div>
+
+    <h3 class="chunk-title">できること5  修正指示</h3>
+    <div class="chunk-body"><div class="prose">「もっと短く」など追加指示ができる<br>対話しながら記事を改善</div></div>
+
+    <h3 class="chunk-title">具体例:今日作る記事</h3>
+    <div class="chunk-body"><div class="prose">入力:<br>【質問】今、リモラボでどんなお仕事をしていますか?<br>【回答】キャリアコーチとして面談を担当しています。<br>【質問】大切にしている考え方は?<br>【回答】その人にとってのベストなペースを一緒に見つけることです。<br>↓  AI が自動で変換 ↓</div></div>
+
+    <h3 class="chunk-title">出力:</h3>
+    <div class="chunk-body"><div class="prose">／「リモラボの裏側」へようこそ！／<br>リモラボはたくさんのスタッフや講師が裏側で動いています。<br>このカテゴリではスタッフや講師が普段は見せない「素顔」や、<br>仕事にかける「本音」をこっそり覗いてもらう場所<br>... (記事が続く)</div></div>
+
+    <h3 class="chunk-title">対応している記事カテゴリ</h3>
+    <div class="chunk-body"><div class="prose">全部で 8 種類のカテゴリに対応</div></div>
+    <aside class="callout callout-info">
+      <p><strong>補足：</strong> <code>SKILL.md</code> では記事カテゴリは <strong>8 種類</strong>です（「箇条書き投稿」含む）。</p>
+      <p>本日はそのうち <strong>7. リモラボの裏側</strong>だけを扱います。</p>
+    </aside>
+
+    <h3 class="chunk-title">今日作るのは ...</h3>
+    <div class="chunk-body"><div class="prose">7. リモラボの裏側<br>スタッフへのインタビュー記事  ←  今日はこれ!</div></div>
+
+    <h3 class="chunk-title">どんな人に便利?</h3>
+    <div class="chunk-body"><div class="prose">記事を書くのが苦手な人<br> 口調を統一したい人<br> 構成を考えるのが面倒な人<br> 添削してもらいたい人<br> 記事作成の時間を短縮したい人</div></div>
+
+    <h3 class="chunk-title">所要時間</h3>
+    <div class="chunk-body">
+      <div class="viz-time-compare" role="img" aria-label="作業時間の目安">
+        <div class="viz-time-row viz-time-row--manual">
+          <div class="viz-time-label"><span>手作業のイメージ</span><span class="viz-time-value">1〜2時間</span></div>
+          <div class="viz-time-track"><span class="viz-time-fill"></span></div>
+        </div>
+        <div class="viz-time-row viz-time-row--cursor">
+          <div class="viz-time-label"><span>Cursor でのイメージ</span><span class="viz-time-value">5〜10分</span></div>
+          <div class="viz-time-track"><span class="viz-time-fill"></span></div>
+        </div>
+      </div>
+      <p class="prose viz-note">※ 初回・混雑状況・データ量により前後します。</p>
+    </div>
+    </div>
+  </section>
+
+  <section class="chapter" id="prep" data-chapter="prep" aria-labelledby="prep-heading">
+    <h2 id="prep-heading">事前準備</h2>
+
+    <div class="chapter-viz">
+      <p class="viz-caption">事前にそろえるもの</p>
+      <div class="viz-prep-row">
+        <div class="viz-prep-card">
+          <span class="ico" aria-hidden="true">🖥️</span>
+          <strong>Cursor</strong>
+          <span>インストール済み</span>
+        </div>
+        <div class="viz-prep-card">
+          <span class="ico" aria-hidden="true">📦</span>
+          <strong>remo-library-skill</strong>
+          <span>ZIP を解凍したフォルダ</span>
+        </div>
+        <div class="viz-prep-card">
+          <span class="ico" aria-hidden="true">📝</span>
+          <strong>インタビューデータ</strong>
+          <span>配布ファイルを手元に</span>
+        </div>
+      </div>
+    </div>
+    <div class="chapter-inner">
+    <h3 class="chunk-title">事前準備</h3>
+    <div class="chunk-body"><div class="prose">必要なもの<br>ワークショップ前に以下を準備してください</div></div>
+
+    <h3 class="chunk-title">必要なもの1</h3>
+    <div class="chunk-body"><div class="prose">Cursor(既にインストール済み)<br>必要なもの2<br>remo-library-skill.zip<br>記事作成用のファイル一式<br>必要なもの3<br>インタビューデータ<br>別途配布されるファイル</div></div>
+
+    <h3 class="chunk-title">準備手順</h3>
+    <div class="chunk-body"><div class="prose">Step 1: ZIP ファイルをダウンロード<br>1. Slack で配布された  remo-library-skill.zip をダウンロード<br>2. ダウンロードフォルダに保存される</div></div>
+
+    <h3 class="chunk-title">Step 2: ZIP ファイルを解凍</h3>
+    <div class="chunk-body"><div class="prose">Windows: ZIP ファイルを右クリック  →  「すべて展開」<br>Mac: ZIP ファイルをダブルクリック<br> おすすめ: 解凍したフォルダはデスクトップに移動しておくと便利<br>です</div></div>
+
+    <h3 class="chunk-title">Step 3: Cursor でフォルダを開く</h3>
+    <div class="chunk-body"><div class="prose">1. Cursor を起動<br>2. 上のメニューから  File →  Open Folder(または「ファイル  →  フォ<br>ルダーを開く」)<br>3. 解凍した  remo-library-skill フォルダを選択<br>4. 開く をクリック</div></div>
+
+    <h3 class="chunk-title">Step 4: 準備完了の確認</h3><div class="chunk-body"><p class="prose">Step 4: 準備完了の確認<br>左側のサイドバーに以下のフォルダが表示されていれば OK</p><pre class="tree">remo-library-skill/
+├──  SKILL.md
+├──  README.md
+├──  rules/
+├──  categories/
+├──  samples/
+├──  output/
+└──  ...</pre></div>
+    </div>
+  </section>
+
+  <section class="chapter" id="schedule" data-chapter="schedule" aria-labelledby="schedule-heading">
+    <h2 id="schedule-heading">当日の流れ</h2>
+
+    <div class="chapter-inner">
+    <h3 class="chunk-title">当日の流れ</h3>
+    <div class="chunk-body">
+      <ol class="time-schedule" role="list">
+        <li><span class="time-slot">0:00〜0:05</span><span class="time-desc">オープニング・準備確認</span></li>
+        <li><span class="time-slot">0:05〜0:15</span><span class="time-desc">ライブデモ（軽く実演）</span></li>
+        <li><span class="time-slot">0:15〜0:45</span><span class="time-desc">ハンズオン（各自で記事作成）</span></li>
+        <li><span class="time-slot">0:45〜0:55</span><span class="time-desc">シェアタイム（成果物を見せ合う）</span></li>
+        <li><span class="time-slot">0:55〜1:00</span><span class="time-desc">まとめ</span></li>
+      </ol>
+      <div class="schedule-strip-wrap">
+        <p>60分のイメージ（帯の長さ＝時間の目安）</p>
+        <div class="schedule-strip" role="img" aria-label="プログラムの時間配分の比較">
+          <span class="schedule-seg schedule-seg--a" title="オープニング">OP</span>
+          <span class="schedule-seg schedule-seg--b" title="デモ">デモ</span>
+          <span class="schedule-seg schedule-seg--c" title="ハンズオン">作る</span>
+          <span class="schedule-seg schedule-seg--d" title="シェア">共有</span>
+          <span class="schedule-seg schedule-seg--e" title="まとめ">締め</span>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section class="chapter" id="howto" data-chapter="howto" aria-labelledby="howto-heading">
+    <h2 id="howto-heading">記事を作る手順</h2>
+
+    <div class="chapter-viz">
+      <p class="viz-caption">チャットに入れるイメージ</p>
+      <div class="viz-chat-window" role="img" aria-label="チャット入力のイメージ">
+        <div class="viz-chat-titlebar">Cursor · チャット</div>
+        <div class="viz-chat-body">
+          <div class="viz-chat-line">@SKILL.md（ファイルを添付）</div>
+          <div class="viz-chat-line">この内容に従って、リモラボの裏側の記事を書いてください</div>
+          <div class="viz-chat-line">（ここにインタビューデータを貼り付け）</div>
+          <div class="viz-chat-line viz-chat-line--hint">→ Enter で送信。しばらくすると output/ に .md ができます</div>
+        </div>
+      </div>
+    </div>
+    <div class="chapter-inner">
+    <h3 class="chunk-title">記事作成の手順</h3>
+    <div class="chunk-body"><div class="prose">今日作る記事<br>カテゴリ: リモラボの裏側<br>お題: インタビュー記事<br>使うデータ: 別途配布されたインタビューデータ</div></div>
+
+    <h3 class="chunk-title">手順</h3>
+    <div class="chunk-body"><div class="prose">Cursor のチャットを開く<br>Windows: Ctrl + L<br>Mac: Cmd + L<br>画面右側にチャット欄が開きます。</div></div>
+
+    <h3 class="chunk-title">チャットで情報を渡す</h3>
+    <div class="chunk-body"><div class="prose">やること: Cursor のチャット欄に、ファイルと指示とデータを一緒に<br>入力します。<br> チャットに入力する内容:<br>@SKILL.md <br>この内容に従って、リモラボの裏側の記事を書いてください<br>(ここに別途配布されたインタビューデータを貼り付け)</div></div>
+
+    <h3 class="chunk-title">入力手順:</h3>
+    <div class="chunk-body"><div class="prose">1. チャット欄をクリックしてカーソルを置く<br>2. @ を入力  →  候補から  SKILL.md を選択(クリック)<br>3. 改行( Enter )<br>4. 「この内容に従って、リモラボの裏側の記事を書いてください」を<br>コピペ<br>5. 改行( Enter )を 2 回<br>6. 別途配布されたインタビューデータをコピペ<br>7. Enter キーで送信</div></div>
+
+    <h3 class="chunk-title">完成イメージ:</h3>
+    <div class="chunk-body"><div class="prose">@SKILL.md <br>この内容に従って、リモラボの裏側の記事を書いてください<br>【 1 】今、リモラボでどんなお仕事をしていますか?<br>キャリアコーチとして面談を担当するほか、 Camp のサポーター ...<br>【 2 】そのお仕事で、大切にしている考え方や思いを教えてください<br>私自身も本業を持ちながら、オンライン秘書の活動や ...<br>(以下、インタビューデータが続く)</div></div>
+
+    <h3 class="chunk-title">ポイント:</h3>
+    <div class="chunk-body"><div class="prose">@SKILL.md でファイルを指定<br>改行して指示文<br>さらに改行してデータ<br>全部まとめて 1 回のチャットで送る</div></div>
+
+    <h3 class="chunk-title">記事が生成される</h3>
+    <div class="chunk-body"><div class="prose">AI が自動で記事を作成します( 2 〜 3 分かかります)<br>「公式さん」の口調で記事が作られます<br>自動で添削もしてくれます<br>output/ フォルダに保存されます</div></div>
+
+    <h3 class="chunk-title">生成された記事を確認</h3>
+    <div class="chunk-body"><div class="prose">1. 左側のサイドバーで  output/ フォルダを開く<br>2. 生成された記事ファイル(.md)をクリック<br>3. 内容を確認する<br>チェックポイント:<br>冒頭に「\「リモラボの裏側」へようこそ!∕」があるか<br>インタビューデータの内容が反映されているか<br>「公式さん」の口調になっているか</div></div>
+
+    <h3 class="chunk-title">修正したい箇所があれば追加指示(余裕があれば)</h3>
+    <div class="chunk-body"><div class="prose">チャットで追加の指示を出せます:<br>例:<br>冒頭の導入部分をもう少し短くしてください<br>見出しを「〇〇」に変えてください<br>もう少し柔らかい口調にしてください</div></div>
+    </div>
+  </section>
+
+  <section class="chapter" id="trouble" data-chapter="trouble" aria-labelledby="trouble-heading">
+    <h2 id="trouble-heading">困ったときは</h2>
+
+    <div class="chapter-viz">
+      <div class="viz-trouble-banner">
+        <span class="ico" aria-hidden="true">🌿</span>
+        <span>つまずいても大丈夫です。まずは<strong>画面をそのまま見せる</strong>・<strong>少し待つ</strong>が近道です。</span>
+      </div>
+    </div>
+    <div class="chapter-inner">
+    <h3 class="chunk-title">困ったときは</h3><div class="chunk-body"><div class="qa-list"><div class="qa-item"><p class="q"><span class="label">Q</span>Cursor のチャットが開かない</p><p class="a"><span class="label">A</span>キーボードショートカット( Ctrl+L / Cmd+L )を再度押してくださ<br>い。または、上のメニューから開けます。</p></div><div class="qa-item"><p class="q"><span class="label">Q</span>AI が反応しない</p><p class="a"><span class="label">A</span>少し待ってみてください。生成に時間がかかることがあります。</p></div></div></div>
+
+    <h3 class="chunk-title">Q: エラーメッセージが出た</h3><div class="chunk-body"><div class="qa-list"><div class="qa-item"><p class="q"><span class="label">Q</span>エラーメッセージが出た</p><p class="a"><span class="label">A</span>そのまま画面を見せてください。</p></div><div class="qa-item"><p class="q"><span class="label">Q</span>インタビューデータがどこにあるかわからない</p><p class="a"><span class="label">A</span>別途配布されたファイルを確認してください。わからなければその<br>場で声をかけてください。</p></div></div></div>
+
+    <h3 class="chunk-title">Q: 記事が期待と違う内容になった</h3><div class="chunk-body"><div class="qa-list"><div class="qa-item"><p class="q"><span class="label">Q</span>記事が期待と違う内容になった</p><p class="a"><span class="label">A</span>大丈夫です!これも学びです。追加で指示を出して修正してみまし<br>ょう。わからなければ声をかけてください。</p></div><div class="qa-item"><p class="q"><span class="label">Q</span>生成が遅い</p><p class="a"><span class="label">A</span>Cursor の無料プランは速度制限があります。少し待つか、他の人の<br>進捗を見ながら待ちましょう。</p></div></div></div>
+    </div>
+  </section>
+
+  <section class="chapter" id="after" data-chapter="after" aria-labelledby="after-heading">
+    <h2 id="after-heading">ワークショップのあと</h2>
+
+    <div class="chapter-viz">
+      <p class="viz-caption">あとから広げやすい使い方</p>
+      <div class="viz-after-grid">
+        <div class="viz-after-card"><span class="ico" aria-hidden="true">📚</span>別カテゴリの記事</div>
+        <div class="viz-after-card"><span class="ico" aria-hidden="true">✏️</span>修正の記録を残す</div>
+        <div class="viz-after-card"><span class="ico" aria-hidden="true">💼</span>メール・議事録など業務へ</div>
+      </div>
+    </div>
+    <div class="chapter-inner">
+    <h3 class="chunk-title">ワークショップ後にできること</h3>
+    <div class="chunk-body"><div class="prose">1. 別のカテゴリの記事を作る<br>今日の体験を活かして、以下にも挑戦してみてください:<br>おすすめ:<br>ツール紹介 - 自分が使っているツールを紹介<br>成⻑シェア - 自分が乗り越えた壁について書く</div></div>
+
+    <h3 class="chunk-title">やり方:</h3>
+    <div class="chunk-body"><div class="prose">@SKILL.md <br>この内容に従って、ツール紹介の記事を書いてください<br>ツール名:(例) Notion<br>紹介したい内容:(例)タスク管理に便利<br>と入力するだけで OK !</div></div>
+
+    <h3 class="chunk-title">2. 記事を修正して記録をつける</h3>
+    <div class="chunk-body"><div class="prose">生成された記事を修正したら、記録を残すと次回から精度が上がりま<br>す。<br>例:<br>修正記録をつけてください。<br>- 修正箇所 : 導入部分<br>- 修正前 : 「皆さま」<br>- 修正後 : 「みなさん」<br>- なぜ直したか : リモラボでは「皆さま」は使わないから</div></div>
+
+    <h3 class="chunk-title">3. 自分の業務に応用する</h3>
+    <div class="chunk-body"><div class="prose">Cursor は記事作成以外にも使えます:<br> メールの下書き<br> データの分析<br> 議事録の整理<br> チェックリストの作成<br> 情報のリサーチ<br>困ったことがあれば、その場で遠慮なく声をかけてください!</div></div>
+    </div>
+  </section>
+
+  <section class="chapter" id="ref" data-chapter="ref" aria-labelledby="ref-heading">
+    <h2 id="ref-heading">参考・フォルダ構成</h2>
+
+    <div class="chapter-viz">
+      <div class="viz-ref-note">
+        <span class="ico" aria-hidden="true">🗂️</span>
+        <span>左のサイドバーは「フォルダの中身」そのもの。<strong>SKILL.md</strong> が司令塔、<strong>output/</strong> に成果物が溜まります。</span>
+      </div>
+    </div>
+    <div class="chapter-inner">
+    <h3 class="chunk-title">参考情報</h3><div class="chunk-body"><p class="prose">参考情報<br>フォルダ構成</p><pre class="tree">remo-library-skill フォルダの中身:
+remo-library-skill/
+├──  SKILL.md           ←  AI が最初に読むファイル
+├──  README.md          ←  詳しい使い方
+├──  rules/             ←  記事のルール集
+├──  categories/        ←  カテゴリごとの作り方
+├──  samples/           ←  サンプル記事・入力例
+├──  output/            ←  生成された記事が保存される
+└──  references/        ←  参考知識</pre></div>
+
+    <h3 class="chunk-title">もっと詳しく知りたい方は</h3>
+    <div class="chunk-body"><div class="prose">README.md - remo-library-skill の詳しい使い方<br>SKILL.md - AI への指示内容(上級者向け)<br>それでは、楽しく記事を作りましょう!</div></div>
+    </div>
+  </section>
+    </article>
+  </div>
+
+  <footer class="doc-footer">
+    <p>コンテンツ管理ユニット AIワークショップ ／ remo-library-skill ／ リモライブラリー</p>
+  </footer>
+  <script src="workshop-copy.js" defer></script>
+</body>
+</html>
