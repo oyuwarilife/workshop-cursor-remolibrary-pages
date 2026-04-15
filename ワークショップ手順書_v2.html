@@ -42,9 +42,18 @@
     <article class="doc-article" id="top">
   <section class="workshop-at-a-glance" id="at-a-glance" aria-labelledby="aag-title">
     <h2 id="aag-title" class="workshop-at-a-glance-title">今日ひと目で</h2>
+    <div class="workshop-preopen-strip" role="region" aria-labelledby="preopen-title">
+      <p class="workshop-preopen-strip-title" id="preopen-title">開く前チェック<br /><span class="workshop-preopen-strip-subline">（ここから先を読む前に）</span></p>
+      <ul class="workshop-preopen-steps" role="list" aria-label="3つの確認">
+        <li><span class="wps-main">Cursor</span><span class="wps-sub">インストールして<br />一度起動まで</span></li>
+        <li><span class="wps-main">ZIP を解凍</span><span class="wps-sub">右クリック<br />「すべて展開」など</span></li>
+        <li><span class="wps-main">フォルダを開く</span><span class="wps-sub">Cursor で <code>remo-library-skill</code><br /><strong>フォルダのまま</strong>開く</span></li>
+      </ul>
+      <p class="workshop-preopen-strip-note">3つとも OK なら、<br />下の「今日のゴール〜持ち物」と本文に進んでください。</p>
+    </div>
     <div class="workshop-at-a-glance-grid">
       <div class="workshop-aag-card workshop-aag-card--goal">
-        <h3 class="workshop-aag-label">ゴール</h3>
+        <h3 class="workshop-aag-label">今日のゴール</h3>
         <p class="workshop-aag-value">Cursor で「リモラボの裏側」の記事を 1 本完成させる</p>
       </div>
       <div class="workshop-aag-card workshop-aag-card--time">
@@ -52,16 +61,15 @@
         <p class="workshop-aag-value">本イベントは <strong>約 60 分</strong>（タイムテーブルは「当日の流れ」参照）</p>
       </div>
       <div class="workshop-aag-card workshop-aag-card--bring">
-        <h3 class="workshop-aag-label">持ち物・事前の準備</h3>
+        <h3 class="workshop-aag-label">持ち物・当日のデータ</h3>
         <ul class="workshop-aag-list">
           <li>PC（<strong>Cursor インストール済み</strong>）</li>
-          <li><code>remo-library-skill</code>（ZIP を解凍し、フォルダを Cursor で開ける状態）</li>
-          <li>配布の<strong>インタビューデータ</strong></li>
+          <li><code>remo-library-skill</code>（ZIP を解凍し、フォルダを Cursor で開いた状態）</li>
+          <li>配布の<strong>インタビューデータ</strong>（なくても、はじめに<strong>ダミー</strong>で試せます）</li>
           <li>安定したネット接続（あると安心）</li>
         </ul>
       </div>
     </div>
-    <p class="workshop-preopen-check" role="note"><strong>開く前チェック：</strong>Cursor は入れた？　ZIP は解凍した？　<code>remo-library-skill</code> を Cursor で<strong>フォルダ開き</strong>した？　…ここまで済ませてから読み進めてください。</p>
   </section>
   <section class="chapter chapter-intro" id="intro" aria-label="はじめに">
     <div class="doc-hero-inner">
@@ -328,7 +336,7 @@ X（Twitter）: https://x.com/hanako_writer
     </div>
   </section>
 
-  <section class="chapter" id="prep" data-chapter="prep" aria-labelledby="prep-heading">
+  <section class="chapter chapter-prep" id="prep" data-chapter="prep" aria-labelledby="prep-heading">
     <h2 id="prep-heading">事前準備</h2>
 
     <div class="chapter-viz">
@@ -351,30 +359,78 @@ X（Twitter）: https://x.com/hanako_writer
         </div>
       </div>
     </div>
-    <div class="chapter-inner">
-    <h3 class="chunk-title">事前準備</h3>
-    <div class="chunk-body"><div class="prose">必要なもの<br>ワークショップ前に以下を準備してください</div></div>
+    <div class="chapter-inner chapter-prep-inner">
 
-    <h3 class="chunk-title">必要なもの1</h3>
-    <div class="chunk-body"><div class="prose">Cursor(既にインストール済み)<br>必要なもの2<br>remo-library-skill.zip<br>記事作成用のファイル一式<br>必要なもの3<br>インタビューデータ<br>別途配布されるファイル</div></div>
+      <p class="prep-lead">ワークショップ当日までに、できる範囲で次をそろえておいてください。<strong>開く前チェック</strong>と同じ内容を、ここでは少し丁寧に書きます。</p>
 
-    <h3 class="chunk-title">準備手順</h3>
-    <div class="chunk-body"><div class="prose">Step 1: ZIP ファイルをダウンロード<br>1. Slack で配布された  remo-library-skill.zip をダウンロード<br>2. ダウンロードフォルダに保存される</div></div>
+      <h3 class="chunk-title prep-chunk-title">必要なもの</h3>
+      <div class="chunk-body">
+        <ul class="prep-need-list">
+          <li><strong>Cursor</strong>（AI エディタ）— <a href="https://cursor.com/" target="_blank" rel="noopener noreferrer">cursor.com</a> からインストール。無料版で可。</li>
+          <li><strong>remo-library-skill</strong>（記事作成用フォルダ一式）— 下記「1.」から ZIP を取得して解凍します。</li>
+          <li><strong>インタビューデータ</strong>（当日配布がある場合）— なくても、手順書「はじめに」の<strong>ダミー貼り付けブロック</strong>で体験できます。</li>
+        </ul>
+      </div>
 
-    <h3 class="chunk-title">Step 2: ZIP ファイルを解凍</h3>
-    <div class="chunk-body"><div class="prose">Windows: ZIP ファイルを右クリック  →  「すべて展開」<br>Mac: ZIP ファイルをダブルクリック<br> おすすめ: 解凍したフォルダはデスクトップに移動しておくと便利<br>です</div></div>
+      <h3 class="chunk-title prep-chunk-title">準備手順</h3>
 
-    <h3 class="chunk-title">Step 3: Cursor でフォルダを開く</h3>
-    <div class="chunk-body"><div class="prose">1. Cursor を起動<br>2. 上のメニューから  File →  Open Folder(または「ファイル  →  フォ<br>ルダーを開く」)<br>3. 解凍した  remo-library-skill フォルダを選択<br>4. 開く をクリック</div></div>
+      <div class="prep-step-block">
+        <h4 class="prep-step-title"><span class="prep-step-num">1</span> remo-library-skill をダウンロード</h4>
+        <div class="prep-step-body">
+          <p>この手順書の<strong>「はじめに」→ 使用するファイル</strong>から <code>remo-library-skill.zip</code> をダウンロードしてください（このページと同じ階層に ZIP があります）。</p>
+          <p class="prep-alt">入手できない場合は、GitHub のリポジトリから ZIP でも構いません：<a href="https://github.com/oyuwarilife/remo-library-skill" target="_blank" rel="noopener noreferrer">github.com/oyuwarilife/remo-library-skill</a> の <strong>Code</strong> → <strong>Download ZIP</strong>。解凍後のフォルダ名が長いときは <code>remo-library-skill</code> にリネームしても大丈夫です。</p>
+        </div>
+      </div>
 
-    <h3 class="chunk-title">Step 4: 準備完了の確認</h3><div class="chunk-body"><p class="prose">Step 4: 準備完了の確認<br>左側のサイドバーに以下のフォルダが表示されていれば OK</p><pre class="tree">remo-library-skill/
-├──  SKILL.md
-├──  README.md
-├──  rules/
-├──  categories/
-├──  samples/
-├──  output/
-└──  ...</pre></div>
+      <div class="prep-step-block">
+        <h4 class="prep-step-title"><span class="prep-step-num">2</span> ZIP を解凍する</h4>
+        <div class="prep-step-body">
+          <ul class="prep-mini-ul">
+            <li><strong>Windows</strong>：ZIP を右クリック → <strong>すべて展開</strong></li>
+            <li><strong>Mac</strong>：ZIP をダブルクリック</li>
+          </ul>
+          <p class="prep-tip">解凍したフォルダは、<strong>デスクトップ</strong>などすぐ分かる場所に置くと当日スムーズです。</p>
+        </div>
+      </div>
+
+      <div class="prep-step-block">
+        <h4 class="prep-step-title"><span class="prep-step-num">3</span> Cursor でフォルダを開く</h4>
+        <div class="prep-step-body">
+          <ol class="prep-ol">
+            <li>Cursor を起動する</li>
+            <li>メニュー <strong>File → Open Folder</strong>（日本語 UI なら <strong>ファイル → フォルダを開く</strong>）</li>
+            <li>解凍した <code>remo-library-skill</code> フォルダを選択（<strong>ZIP ではなく、フォルダ本体</strong>）</li>
+            <li><strong>開く</strong> をクリック</li>
+          </ol>
+          <p class="prep-warn"><strong>重要：</strong>ZIP のままではなく、必ず<strong>解凍したフォルダ</strong>を開いてください。</p>
+        </div>
+      </div>
+
+      <div class="prep-step-block">
+        <h4 class="prep-step-title"><span class="prep-step-num">4</span> 準備できたか確認する</h4>
+        <div class="prep-step-body">
+          <p>左のサイドバー（ファイル一覧）に、次のような名前が見えていれば OK です。</p>
+          <ul class="prep-checklist">
+            <li><code>SKILL.md</code></li>
+            <li><code>README.md</code></li>
+            <li>フォルダ例：<code>rules</code>／<code>categories</code>／<code>samples</code>／<code>references</code> など</li>
+            <li>（あれば）<code>preview.html</code> や <code>output</code></li>
+          </ul>
+          <p>ここまでできていれば、当日はこのウィンドウをそのまま使えます。</p>
+        </div>
+      </div>
+
+      <h3 class="chunk-title prep-chunk-title">うまくいかないとき</h3>
+      <div class="chunk-body">
+        <table class="compare prep-trouble-table">
+          <thead><tr><th>症状</th><th>確認すること</th></tr></thead>
+          <tbody>
+            <tr><td>フォルダが開けない</td><td>解凍済みか。親フォルダではなく <code>remo-library-skill</code> <strong>本体</strong>を開いているか</td></tr>
+            <tr><td><code>SKILL.md</code> が見えない</td><td>別のプロジェクトを開いていないか。もう一度 <strong>Open Folder</strong> で選び直す</td></tr>
+            <tr><td>Cursor がない</td><td>事前にインストールし、<strong>一度起動</strong>まで済ませる</td></tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </section>
 
